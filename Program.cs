@@ -1,4 +1,4 @@
-﻿namespace WordCount
+﻿namespace Swapped
 {
     internal class Program
     {
@@ -6,7 +6,13 @@
         {
             Calculator aCalculator = new Calculator();
 
-            Console.WriteLine(aCalculator.CountWords("This is a test."));
+
+
+
+            Console.WriteLine(aCalculator.FlipEndChars("Cat, dog, and mouse"));
+
+
+
         }
     }
 }
