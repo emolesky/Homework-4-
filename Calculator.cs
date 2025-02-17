@@ -1,24 +1,36 @@
 ﻿//Emilynn Molesky
 //2/16/25
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NextLetter
+namespace Vowels
 {
     public class Calculator
     {
-        public string Move(string str)
+        public string FirstNVowels(string str, int n)
         {
+            string vowels = "aeiouAEIOU";
             string result = "";
+            int count = 0;
 
-            foreach(char c in str)
+            foreach (char c in str)
             {
-                result += (char)(c + 1);
+                if (vowels.Contains(c))
+                {
+                    result += c;
+                    count++;
+
+                    if (count == n)
+                    {
+                        return result;
+                    }
+                }
 
             }
-            return result;
+            return "Invalid";
         }
     }
 }
