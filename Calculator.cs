@@ -1,36 +1,21 @@
-﻿//Emilynn Molesky
-//2/16/25
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Vowels
+namespace InOrder
 {
     public class Calculator
     {
-        public string FirstNVowels(string str, int n)
+        public bool IsInOrder (string str)
         {
-            string vowels = "aeiouAEIOU";
-            string result = "";
-            int count = 0;
-
-            foreach (char c in str)
+            for (int i = 1; i < str.Length; i++)
             {
-                if (vowels.Contains(c))
-                {
-                    result += c;
-                    count++;
-
-                    if (count == n)
-                    {
-                        return result;
-                    }
-                }
-
+                if (str[i] < str[i - 1])
+                    return false;
             }
-            return "Invalid";
+            return true;
         }
     }
 }
